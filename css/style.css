@@ -125,7 +125,7 @@ ul#listaNcm {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 3px;
-  padding-left: 15px;
+  padding-left: 25px;
   margin: 0;
 }
 
@@ -135,6 +135,7 @@ hr {
   margin: 40px 0;
 }
 
+/* Animação suave do gradiente neon */
 .neon-box::before {
   content: "";
   position: absolute;
@@ -151,7 +152,7 @@ hr {
   mask-composite: exclude;
   z-index: 0;
 
-  pointer-events: none; /* <=== aqui! */
+  pointer-events: none;
 }
 
 main {
@@ -161,7 +162,6 @@ main {
   border-radius: 12px;
 }
 
-/* Animação suave do gradiente neon */
 @keyframes borderPulse {
   0% {
     background-position: 0% 50%;
