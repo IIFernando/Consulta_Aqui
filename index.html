@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consulta Aqui</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <main>
+    <h1>Consulta CNPJ</h1>
+    <form id="cnpjForm" class="form-consulta">
+      <label for="cnpjInput">Digite o CNPJ (somente números, 14 dígitos):</label>
+      <input
+        type="text"
+        id="cnpjInput"
+        name="cnpj"
+        maxlength="14"
+        required
+        placeholder="Ex: 19131243000197"
+        pattern="\d{14}"
+      />
+      <button type="submit">Consultar CNPJ</button>
+      <button type="button" id="limparCNPJ">Limpar</button>
+      <button type="button" id="toggleCNPJ">Expandir/Recolher</button>
+    </form>
+    <div id="mensagem" class="mensagem"></div>
+    <section id="resultado" class="resultado collapsed" hidden>
+      <h2>Dados do CNPJ</h2>
+      <div class="campo"><strong>CNPJ:</strong> <span id="cnpj"></span></div>
+      <div class="campo"><strong>Razão Social:</strong> <span id="razao_social"></span></div>
+      <div class="campo"><strong>Nome Fantasia:</strong> <span id="nome_fantasia"></span></div>
+      <div class="campo"><strong>Natureza Jurídica:</strong> <span id="natureza_juridica"></span></div>
+      <div class="campo"><strong>Data Início Atividade:</strong> <span id="data_inicio_atividade"></span></div>
+      <div class="campo multiline"><strong>Logradouro:</strong> <span id="logradouro"></span></div>
+      <div class="campo"><strong>Número:</strong> <span id="numero"></span></div>
+      <div class="campo multiline"><strong>Complemento:</strong> <span id="complemento"></span></div>
+      <div class="campo"><strong>Bairro:</strong> <span id="bairro"></span></div>
+      <div class="campo"><strong>Cidade:</strong> <span id="municipio"></span></div>
+      <div class="campo"><strong>UF:</strong> <span id="uf"></span></div>
+      <div class="campo"><strong>CEP:</strong> <span id="cep"></span></div>
+      <div class="campo"><strong>Email:</strong> <span id="email"></span></div>
+      <div class="campo"><strong>CNAE Fiscal:</strong> <span id="cnae_fiscal"></span></div>
+      <div class="campo multiline"><strong>Descrição CNAE Fiscal:</strong> <span id="cnae_fiscal_descricao"></span></div>
+      <div class="campo multiline"><strong>CNAEs Secundários:</strong> <ul id="cnaes_secundarios"></ul></div>
+      <div class="campo multiline"><strong>QSA (Sócios e Administradores):</strong> <ul id="qsa"></ul></div>
+      <div class="campo multiline"><strong>Regime Tributário:</strong> <ul id="regime_tributario"></ul></div>
+      <div class="campo"><strong>Situação Cadastral:</strong> <span id="descricao_situacao_cadastral"></span></div>
+    </section>
+
+    <hr />
+
+    <h1>Consulta CEP</h1>
+    <form id="cepForm" class="form-consulta">
+      <label for="cepInput">Digite o CEP (somente números, 8 dígitos):</label>
+      <input
+        type="text"
+        id="cepInput"
+        name="cep"
+        maxlength="8"
+        required
+        placeholder="Ex: 01311902"
+        pattern="\d{8}"
+      />
+      <button type="submit">Consultar CEP</button>
+      <button type="button" id="limparCEP">Limpar</button>
+      <button type="button" id="toggleCEP">Expandir/Recolher</button>
+    </form>
+    <div id="mensagemCep" class="mensagem"></div>
+    <section id="resultadoCep" class="resultado collapsed" hidden>
+      <h2>Dados do CEP</h2>
+      <div class="campo"><strong>CEP:</strong> <span id="cepResultado"></span></div>
+      <div class="campo multiline"><strong>Logradouro:</strong> <span id="logradouroCep"></span></div>
+      <div class="campo"><strong>Bairro:</strong> <span id="bairroCep"></span></div>
+      <div class="campo"><strong>Cidade:</strong> <span id="cidadeCep"></span></div>
+      <div class="campo"><strong>Estado (UF):</strong> <span id="ufCep"></span></div>
+    </section>
+
+    <hr />
+
+    <h1>Consulta NCM</h1>
+    <form id="ncmForm" class="form-consulta">
+      <label for="ncmInput">Digite o código NCM (opcional):</label>
+      <input
+        type="text"
+        id="ncmInput"
+        name="ncm"
+        maxlength="8"
+        placeholder="Ex: 01012100"
+        pattern="\d*"
+      />
+      <button type="submit">Consultar NCM</button>
+      <button type="button" id="limparNCM">Limpar</button>
+      <button type="button" id="toggleNCM">Expandir/Recolher</button>
+    </form>
+    <div id="mensagemNcm" class="mensagem"></div>
+    <section id="resultadoNcm" class="resultado collapsed" hidden>
+      <h2>Lista de NCMs</h2>
+      <ul id="listaNcm"></ul>
+    </section>
+  </main>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
